@@ -4,4 +4,4 @@ const constant = function* constant (c) {
     }
 }
 
-export default constant
+module.exports = constant

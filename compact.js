@@ -1,5 +1,5 @@
-import filter from './filter'
+const filter = require('./filter')
 
 const compact = filter (x => x !== null && x !== undefined)
 
-export default compact
+module.exports = compact

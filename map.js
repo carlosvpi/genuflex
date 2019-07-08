@@ -1,4 +1,4 @@
-import nil from './nil'
+const nil = require('./nil')
 
 const map = (f) => function* map (generator, feed = nil) {
     let next
@@ -9,4 +9,4 @@ const map = (f) => function* map (generator, feed = nil) {
     }
 }
 
-export default map
+module.exports = map

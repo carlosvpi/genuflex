@@ -1,4 +1,4 @@
-import nil from './nil'
+const nil = require('./nil')
 
 const takeWhile = (p) => function* takeWhile (generator, feed = nil) {
 	let next
@@ -12,4 +12,4 @@ const takeWhile = (p) => function* takeWhile (generator, feed = nil) {
 	}
 }
 
-export default takeWhile
+module.exports = takeWhile

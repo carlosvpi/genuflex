@@ -1,13 +1,16 @@
-import nil from './nil'
+const nil = require('./nil')
 
 const some = (...generators) => function* (feed = nil) {
-    let next
     let food = feed.next()
+
+    if (food.done) return
+
+    let next = generators.map(generator => generator.next(food))
     
-    do {
+    while (!food.done && !(next.reduce((acc, { done }) => acc && done, true))) {
+        food = feed.next(yield next.map(({ value }) => value))
         next = generators.map(generator => generator.next(food))
-        food = feed.next(yield next.map(({ value }) => value))))
-    } while (!food.done && !(next.reduce((acc, { done }) => acc || done, false)))
+    }
 }
 
-export default some
+module.exports = some

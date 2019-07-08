@@ -1,6 +1,6 @@
-import nil from './nil'
+const nil = require('./nil')
 
-const forEach = (f) => (generator, feed = nil) {
+const forEach = (f) => (generator, feed = nil) => {
     let next
     let food = feed.next()
     
@@ -10,4 +10,4 @@ const forEach = (f) => (generator, feed = nil) {
     }
 }
 
-export default forEach
+module.exports = forEach

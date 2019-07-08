@@ -1,5 +1,5 @@
-import filter from './filter'
+const filter = require('./filter')
 
 const reject = (p) => filter (x => !p(x))
 
-export default reject
+module.exports = reject
