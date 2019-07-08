@@ -14,4 +14,16 @@ describe('slice', function () {
 
 		assert.deepEqual(toArray(slice(-4, -2)(fromArray(array))), array.slice(-4, -2))
 	})
+	it('should use feedback mechanism', function() {
+		const feed = [true, false, true, true, false]
+		function* negator () {
+			let last = true
+			while (true) {
+				last = !(yield last)
+			}
+		}
+
+		assert.deepEqual(toArray(slice(0, 5)(negator(), fromArray(feed))), [true].concat(feed.map(x => !x)))
+	})
+
 })
