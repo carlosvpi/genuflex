@@ -1,5 +1,5 @@
-import constant from './constant'
+const constant = require('./constant')
 
 const nil = constant(null)
 
-export default nil
+module.exports = nil

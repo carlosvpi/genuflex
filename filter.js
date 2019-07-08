@@ -1,4 +1,4 @@
-import nil from './nil'
+const nil = require('./nil')
 
 const filter = (p) => function* filter (generator, feed = nil) {
     let next
@@ -11,4 +11,4 @@ const filter = (p) => function* filter (generator, feed = nil) {
     }
 }
 
-export default filter
+module.exports = filter

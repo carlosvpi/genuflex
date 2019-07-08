@@ -1,4 +1,4 @@
-import nil from './nil'
+const nil = require('./nil')
 
 const reduce = (f, init) => function* reduce (generator, feed = nil) {
     let food = feed.next()
@@ -7,7 +7,7 @@ const reduce = (f, init) => function* reduce (generator, feed = nil) {
     
     let next
     let i = 0
-    let acc = init !== undefined ? init : generator.next(food.value)
+    let acc = init !== undefined ? init : generator.next(food.value).value
 
     food = feed.next()
     while (!food.done && !(next = generator.next(food.value)).done) {
@@ -15,4 +15,4 @@ const reduce = (f, init) => function* reduce (generator, feed = nil) {
     }
 }
 
-export default reduce
+module.exports = reduce

@@ -1,6 +1,6 @@
-import nil from './nil'
+const nil = require('./nil')
 
-const toArray = (generator, feed = nil) {
+const toArray = (generator, feed = nil) => {
     let array = []
     let next
     let food = feed.next()
@@ -9,6 +9,8 @@ const toArray = (generator, feed = nil) {
         array.push(next.value)
         food = feed.next()
     }
+
+    return array
 }
 
-export default toArray
+module.exports = toArray

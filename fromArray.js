@@ -4,4 +4,4 @@ const fromArray = function* fromArray (array) {
     }
 }
 
-export default fromArray
+module.exports = fromArray
