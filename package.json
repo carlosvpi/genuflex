@@ -1,0 +1,23 @@
+{
+  "name": "regenerator",
+  "version": "1.0.0",
+  "description": "Utility functions for generators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosvpi/regenerator.git"
+  },
+  "keywords": [
+    "generator",
+    "functional"
+  ],
+  "author": "Carlos Vazquez Perez-Inigo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlosvpi/regenerator/issues"
+  },
+  "homepage": "https://github.com/carlosvpi/regenerator#readme"
+}
