@@ -1,11 +1,10 @@
-const nil = require('./nil')
-
-const map = (f) => function* map (generator, feed = nil) {
+const map = (f) => function* map (generator) {
     let next
-    let food = feed.next()
+    let feedback
+    let i = 0
     
-    while (!food.done && !(next = generator.next(food.value)).done) {
-        food = feed.next(yield f(next.value))
+    while (!(next = generator.next(feedback)).done) {
+        feedback = yield f(next.value, i++, generator)
     }
 }
 

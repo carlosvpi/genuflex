@@ -1,17 +1,12 @@
-const nil = require('./nil')
-
-const reduce = (f, init) => function* reduce (generator, feed = nil) {
-    let food = feed.next()
-    
-    if (food.done) return
-    
+const reduce = (f, init) => function* reduce (generator) {
+    let feedback
     let next
     let i = 0
-    let acc = init !== undefined ? init : generator.next(food.value).value
+    let acc = init !== undefined ? init : generator.next(feedback).value
 
-    food = feed.next()
-    while (!food.done && !(next = generator.next(food.value)).done) {
-        food = feed.next(yield (acc = f(acc, next.value, i++)))
+    while (!(next = generator.next(feedback)).done) {
+    	acc = f(acc, next.value, i++, generator)
+        feedback = yield acc
     }
 }
 

@@ -9,6 +9,6 @@ describe('every', function () {
 		const names = ['luke', 'leia', 'han']
 		const expected = [[ 0, 'luke' ], [ 1, 'leia' ], [ 2, 'han' ]]
 
-		assert.deepEqual(toArray(every(fromArray(numbers), fromArray(names))()), expected)
+		assert.deepEqual(toArray(every(fromArray(numbers), fromArray(names))), expected)
 	})
 })

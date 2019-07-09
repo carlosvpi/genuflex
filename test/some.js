@@ -9,6 +9,6 @@ describe('some', function () {
 		const names = ['luke', 'leia', 'han']
 		const expected = [[ 0, 'luke' ], [ 1, 'leia' ], [ 2, 'han' ], [ 3, undefined ], [ 4, undefined ]]
 
-		assert.deepEqual(toArray(some(fromArray(numbers), fromArray(names))()), expected)
+		assert.deepEqual(toArray(some(fromArray(numbers), fromArray(names))), expected)
 	})
 })

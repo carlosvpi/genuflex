@@ -1,12 +1,10 @@
-const nil = require('./nil')
-
-const filter = (p) => function* filter (generator, feed = nil) {
+const filter = (p) => function* filter (generator) {
     let next
-    let food = feed.next()
+    let feedback
     
-    while (!food.done && !(next = generator.next(food.value)).done) {
+    while (!(next = generator.next(feedback)).done) {
         if (p(next.value)) {
-            food = feed.next(yield next.value)
+            feedback = yield next.value
         }
     }
 }

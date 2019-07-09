@@ -1,12 +1,8 @@
-const nil = require('./nil')
-
-const forEach = (f) => (generator, feed = nil) => {
+const forEach = (f) => (generator) => {
     let next
-    let food = feed.next()
     
-    while (!food.done && !(next = generator.next(food.value)).done) {
+    while (!(next = generator.next()).done) {
         f(next.value)
-        food = feed.next()
     }
 }
 
