@@ -7,6 +7,16 @@ Utility functions for generators
 $ yarn add genuflex
 ```
 
+## Import
+
+```javascript
+import * from 'genuflex'
+```
+
+```javascript
+import filter from 'genuflex/filter'
+```
+
 ## Documentation
 
 ### `compact: Generator T -> Generator T`
