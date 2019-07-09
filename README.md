@@ -1,10 +1,10 @@
-# regenerator
+# genuflex
 Utility functions for generators
 
 ## Install
 
 ```bash
-$ yarn add regenerator
+$ yarn add genuflex
 ```
 
 ## Documentation

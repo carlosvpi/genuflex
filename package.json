@@ -1,5 +1,5 @@
 {
-  "name": "regenerator",
+  "name": "genuflex",
   "version": "0.0.0",
   "description": "Utility functions for generators",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carlosvpi/regenerator.git"
+    "url": "git+https://github.com/carlosvpi/genuflex.git"
   },
   "keywords": [
     "generator",
@@ -17,9 +17,9 @@
   "author": "Carlos Vazquez Perez-Inigo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carlosvpi/regenerator/issues"
+    "url": "https://github.com/carlosvpi/genuflex/issues"
   },
-  "homepage": "https://github.com/carlosvpi/regenerator#readme",
+  "homepage": "https://github.com/carlosvpi/genuflex#readme",
   "devDependencies": {
     "mocha": "^6.1.4"
   }
